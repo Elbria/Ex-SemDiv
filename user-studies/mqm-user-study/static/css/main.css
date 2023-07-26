@@ -1,0 +1,93 @@
+h-l-1{
+    background-color: #8cff32;
+    color: black;
+    border-radius: 6px;
+    padding: 1px 1px;
+}
+
+h-l-2{
+    background-color: #FFFF00;
+    color: black;
+    border-radius: 6px;
+    padding: 1px 1px;
+}
+
+.checkboxes label {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.checkboxes input {
+    margin-top:0px !important;
+    vertical-align: middle;
+}
+
+.checkboxes label span {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.ins{
+    margin-top:10px;
+}
+
+p.a {
+  font-family: "Times New Roman", Times, serif;
+}
+
+p.b {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.panel-primary > .panel-heading-custom {
+    background: #ff0000; color: #fff;
+}
+
+  /* Using css var aka custom properies, don't use them if you don't use tools such as postCss */
+    :root {
+      --color-blue: #5897fc;
+      --color-blue-grayed: #e0ecff;
+    }
+    /* First hide radios */
+    .questions input[type="radio"] {
+      display: none;
+    }
+
+    /* Generate new radio buttons, which we can style via css */
+    .questions label:before {
+      content: attr(data-question-number);
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid;
+      text-align: center;
+      line-height: 30px;
+      margin-right: 20px;
+    }
+
+    /* Applying styles when checking the buttons */
+    .questions input[type="radio"]:checked ~ label {
+      background-color: var(--color-blue-grayed);
+      border-color: var(--color-blue);
+    }
+
+    .questions input[type="radio"]:checked ~ label:before {
+      background-color: var(--color-blue);
+      border-color: var(--color-blue);
+      color: white;
+    }
+
+    .questions label {
+      display: block;
+      cursor: pointer;
+
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: white;
+      border: 2px solid white;
+      border-radius: 15px;
+    }
+    .questions {
+      padding: 5px;
+    }

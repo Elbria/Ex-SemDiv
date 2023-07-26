@@ -1,0 +1,1 @@
+ De modo semejante a lo que ocurre con un control remoto de televisión, este control está provisto de dos sensores ubicados cerca del televisor del usuario, posibilitando la triangulación de su posición en un espacio tridimensional.

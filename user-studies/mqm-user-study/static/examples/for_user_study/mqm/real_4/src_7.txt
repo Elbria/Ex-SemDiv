@@ -1,0 +1,1 @@
+ Fade-Thru-Black ( FTBTM ) Switching - The video fades to black and then the new <h-l-1>input</h-l-1> fades from black for smooth , glitch − free switching .

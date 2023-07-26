@@ -1,0 +1,1 @@
+ <h-l-2>Adjust</h-l-2> font size : Drag thecircle icon <h-l-1>beside</h-l-1> ' Font Size ' to change the size of the text .

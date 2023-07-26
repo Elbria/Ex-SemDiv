@@ -1,0 +1,1 @@
+ <h-l-1>Zeilenabstand anpassen : Ziehen Sie das Kreissymbol neben</h-l-1> " Zeilenabstand " , um den <h-l-2>Abstand</h-l-2> zwischen den Textzeilen zu vergrößern oder zu verkleinern .

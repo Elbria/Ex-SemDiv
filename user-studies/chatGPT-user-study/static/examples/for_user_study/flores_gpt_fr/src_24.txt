@@ -1,0 +1,1 @@
+ The speeds of 802.11n are substantially faster than that of its predecessors with a maximum theoretical throughput of 600Mbit/s.

@@ -1,0 +1,1 @@
+ Adjust font style : Tap the dropdown menu beside <h-l-1>' Font Face '</h-l-1> to select from a list of available fonts .

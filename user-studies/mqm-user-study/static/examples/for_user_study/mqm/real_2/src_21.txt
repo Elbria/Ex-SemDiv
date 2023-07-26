@@ -1,0 +1,1 @@
+ <h-l-1>Adjust line spacing : Drag thecircle icon beside</h-l-1> ' Line Spacing ' to increase or decrease the <h-l-2>space</h-l-2> between the lines of type .

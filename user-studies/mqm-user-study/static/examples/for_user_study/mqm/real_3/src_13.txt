@@ -1,0 +1,1 @@
+ Under " Payment Information , " select the type of credit card and enter your card number , security code ( CVV ) , name on the card , and expiration date .

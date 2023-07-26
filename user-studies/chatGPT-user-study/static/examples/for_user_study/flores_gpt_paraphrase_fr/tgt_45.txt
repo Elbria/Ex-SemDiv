@@ -1,0 +1,1 @@
+ Identique à une télécommande de télévision, <h-l-1>la commande</h-l-1> utilise deux capteurs placés près du téléviseur de l'utilisateur pour trianguler sa position dans l'espace tridimensionnel.

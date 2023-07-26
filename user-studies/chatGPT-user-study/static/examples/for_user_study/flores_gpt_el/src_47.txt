@@ -1,0 +1,1 @@
+ Resembling a television remote, the controller uses two sensors placed near the user's television to triangulate its position in three-dimensional space.

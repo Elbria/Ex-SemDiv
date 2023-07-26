@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Explaining Meaning Differences Across Languages</title>
+  <meta name="description" content="Explaining Meaning Differences">
+
+  <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/introjs.css">
+  <link rel="canonical" href="">
+
+  <base target="_blank">
+</head>
+
+<body>
+    <section class="container">
+        <div class="row" style="margin-top:10px;" id="consent">
+            <div class="col-xs-12 col-md-12">
+                <div class="panel panel-primary">
+                    <a class="panel-heading" id="collapseTrigger"><strong>Consent Form</strong></a>
+                    <div class="panel-body">
+                        <!-- <p>About the task</p> -->
+                        <div class="ins">
+                            <b>Project Title:</b> Explaining Semantic Divergences to Bilingual Speakers (IRB Package Number 2018458-1)
+                        </div>
+                        <!-- <b>Principal Investigator:</b> Dr. Marine Carpuat (marine@umd.edu), University of Maryland, College Park. <br> -->
+                        <div class="ins">
+                            <b>About the study:</b> The purpose of this study is to investigate ways to improve human and machine collaboration in detecting meaning differences between texts written in different languages using explainable automated reasoning.
+                            <ul>
+                                <div id="instructions-text"></div>
+                                <li>The study takes up to 30 minutes to complete.</li>
+                            </ul>
+                        </div>
+                        <div class="ins">
+                            <b>Data and Confidentiality:</b> The study collects minimal demographic information, such as age and gender. 
+                            You can opt-out of answering demographic questions.
+                            Crowdworker ID is the only potentially identifying information, which will be immediately removed from the data after participants are paid. 
+                            All data will be anonymized prior to public release and responses cannot be linked to individuals. 
+                            Any potential loss of confidentiality will be minimized by storing data in a secured password protected database.
+                        </div>
+                        <div class="ins">
+                            <b>Right to Withdraw and Questions:</b> Participation in the study is completely voluntary. If you decide to participate in this research, you may stop participating at any time.
+                            If you have questions, concerns, or complaints, or if you need to report an injury related to the research, please contact the investigator:
+                            <div style="text-align: center">
+                                <div>Dr. Marine Carpuat</div>
+                                <div>Brendan Iribe Center for Computer Science and Engineering</div>
+                                <div>8125 Paint Branch Dr.</div>
+                                <div>College Park, Maryland, 20742</div>
+                                <div>E-mail: marine@umd.edu</div>
+                            </div>
+                        </div>
+                        <div class="ins">
+                            <b>Risks:</b> There are no known risks associated with participants of this study. You will be able to skip questions you do not want to answer or end you participation at any time.
+                        </div>
+                        <div class="ins">
+                            <b>Benefits:</b>  There are no direct benefits for participants. This study will make it possible to encourage bilingual speaker’s sensitivity in detecting nuanced differences in meaning across languages, via automatic annotations grounded in specific text spans. We hope that in the future, other people might benefit from this study by gaining an understanding of differences between languages and cultures, based on evidence from publicly available text data.
+                        </div>
+                        <div class="ins">
+                            <b>Participant Rights: </b>This project has been reviewed by the University of Maryland Institutional Review Board (Package Number 2018458-1).
+                            If you have questions about your rights as a research participant or wish to report a research-related injury, please contact: <br>
+                            <div style="text-align: center">
+                                <div>University of Maryland College Park</div>
+                                <div>Institutional Review Board Office</div>
+                                <div>1204 Marie Mount Hall</div>
+                                <div>College Park, Maryland, 20742</div>
+                                <div>E-mail: irb@umd.edu</div>
+                            </div>
+                        </div>
+                        <div class="ins">
+                            <b>Compensation: </b>You will be compensated for your participation at a rate equivalent to approximately $15/hour directly through the platform. <br>
+                        </div>
+                        <div class="ins">
+                            <b>Consent Statement: </b>By clicking 'I consent to participate in the study', you indicate that you are at least 18 years of age; 
+                            you have read this consent information or have had it read to you; 
+                            your questions have been answered to your satisfaction and you voluntarily agree to participate in this research study. 
+                            Please download/print/save a copy of this consent information for your records.
+                        </div>
+                        <div class="ins checkboxes">
+                            <label for="consent" style="font-weight: normal;"><input type="checkbox" id="consent" name="consent"><span>I consent to participate in the study.</span></label>
+                        </div>
+                        <div class="error" style="width:35%;">
+                            <crowd-alert type="error">Please consent to the study before moving forward.</crowd-alert>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="example" style="display: table; margin: 0 auto; margin-top:0px; margin-bottom:10px;">
+                <crowd-button variant="primary" id="starttutorial">Start</crowd-button>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top:10px;" id="instructions">
+            <div class="col-xs-12 col-md-12">
+                <div class="panel panel-primary"><!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature --><a class="panel-heading" id="collapseTrigger"><strong>Task Instructions</strong> <span class="collapse-text"></span> </a>
+                    <div class="panel-body" id="instructionBody">
+                        <!-- <p>About the task</p> -->
+                        <!-- The purpose of this study is to investigate ways to improve human and machine collaboration in decision making tasks using explainable automated reasoning. -->
+                        <ul>
+                            <div id="instructions-text-top"></div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div id="starttutorial_scrn" style="display: table; margin: 0 auto; margin-top:10px; margin-bottom:10px;">
+            <crowd-button variant="primary" id="starttutorial">Start Tutorial</crowd-button>
+        </div> -->
+        <!-- <div id="starttutorial_scrn" style="display: table; margin: 0 auto; margin-top:10px; margin-bottom:10px;">
+            <crowd-button variant="primary" id="starttutorial">Start Tutorial</crowd-button>
+        </div> -->
+
+        <div class="screen" id="tutorial">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Tutorial</div>
+                <div class="task">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="class-demo" data-step="1" data-title="Portuguese sentence" data-intro="The original Portuguese sentence.">
+                                <p class="text_screen" id="fg_tutorial">
+                                    O protesto começou por volta das 11:00 hora local (Tempo Universal Coordenado + 1)
+                                    <span id="highlighted_text_tutorial_s" class="class-demo" class="highlights_tutorial" data-step="3" data-title="Highlights" data-intro="Parts of sentences indicative of meaning differences (AI-generated)">
+                                        <h-l-1>em Whitehall,</h-l-1>
+                                    </span>
+                                    <span id="highlighted_text_wotutorial_s">
+                                        em Whitehall,
+                                    </span>
+                                    em frente à entrada da residência oficial do Primeiro Ministro, guardada pela polícia de Downing Street.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12" id="background_tutorial">
+                            <div class="class-demo" data-step="2" data-title="Translated sentence" data-intro="The translated sentence.">
+                                <p class="background_screen" id="bg_tutorial">
+                                    <span id="spanish_tutorial">
+                                        The protest started around 11:00 local time (UTC+1) in
+                                        <span id="highlighted_text_tutorial_t" class="class-demo" class="highlights_tutorial" data-step="4" data-title="Highlights" data-intro="Parts of sentences indicative of meaning differences (AI-generated)">
+                                        <h-l-1> Trafalgar Square,</h-l-1>
+                                    </span>
+                                    <span id="highlighted_text_wotutorial_t">
+                                        Trafalgar Square,
+                                    </span>
+                                        opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence.
+                                    </span>
+
+
+
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    <hr style="margin-top:10px;">
+                    <div class="row prompt">
+                        <div class="col-md-4">
+
+                            <div class="class-demo" data-step="7" data-title="Accuracy error?" data-intro="Translations with accuracy errors are defined as translations that deviate in meaning as compared to the source sentence. ">
+                                <div style="margin-top:20px;">
+                                <strong> Does the translated text contain an accuracy error? </strong>
+                                </div>
+                                <div  style="margin-left:40px; margin-top:10px;">
+                                    <input type="radio" id="yes_tutorial" value="yes" checked="checked">
+                                    <label style="margin-right:10px; margin-left:5px; font-weight: normal;">Yes</label>
+                                    <input type="radio" id="no_tutorial" value="no ">
+                                    <label style="margin-left:5px; font-weight: normal;">No </label>
+                                </div>
+                            </div>
+
+
+                            <div class="class-demo" data-step="8" data-title="Severity of error?" data-intro="Indicate the severity of the accuracy error (if multiple errors apply, indicate the one with the highest severity).
+                          ">                                <div  style="margin-left:10px; margin-top:10px;">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select the severity of the accuracy error.</label>
+                                         <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>N/A</option>
+                                             <option>⚠️ Minor</option>
+                                            <option selected>🛑 Major </option>
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="screen" id="startsurvey_scrn" style="display: table; margin: 0 auto; margin-top:10px; margin-bottom:10px;">
+            <div class="class-demo" id="final" data-step="9" data-title="Ready?" data-intro="Press <b>Start Survey</b> if you are ready.">
+                <!--crowd-button variant="primary" id="restart_tutorial" style="margin-right:10px">Restart</crowd-button>-->
+                <crowd-button variant="primary" id="startsurvey">Start Survey</crowd-button>
+            </div>
+        </div>
+        
+        <form answer-format="flatten-objects" id="form">
+
+            <!-- Screen 0 -->
+            <!-- <div class="screen" id="screen0">
+                <div id="task_screen0"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>                
+            </div> -->
+            
+            <!-- Screen 1 -->
+            <div class="screen" id="screen1">
+                <div id="task_screen1"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>                
+            </div>
+
+
+            <!-- Screen 2 -->
+            <div class="screen" id="screen2">
+                <div id="task_screen2"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div> 
+            </div>
+
+
+            <!-- Screen 3 -->
+            <div class="screen" id="screen3">
+                <div id="task_screen3"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>                
+            </div>
+
+            <!-- Screen 4 -->
+            <div class="screen" id="screen4">
+                <div id="task_screen4"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div> 
+            </div>
+
+            <!-- Screen 5 -->
+            <div class="screen" id="screen5">
+                <div id="task_screen5"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div> 
+            </div>
+
+            <!-- Screen 6 -->
+            <div class="screen" id="screen6">
+                <div id="task_screen6"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div> 
+            </div>
+
+            <!-- Screen 7 -->
+            <div class="screen" id="screen7">
+                <div id="task_screen7"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div> 
+            </div>
+
+            <!-- Screen 8 -->
+            <div class="screen" id="screen8">
+                <div id="task_screen8"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div> 
+            </div>
+
+            <!-- Screen 9 -->
+            <div class="screen" id="screen9">
+                <div id="task_screen9"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div> 
+            </div>
+
+            <!-- Screen 10 -->
+            <div class="screen" id="screen10">
+                <div id="task_screen10"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div> 
+            </div>
+
+            
+            <div class="screen" id="screen11">
+                <div id="task_screen11"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div> 
+            </div>
+
+            <div class="screen" id="screen12">
+                <div id="task_screen12"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div> 
+            </div>
+
+            <!-- Survey Screen 13 -->
+            <div class="screen" id="screen13">
+                <div id="task_screen13"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div> 
+            </div>
+
+            <!-- Survey Screen 15 -->
+            <div class="screen" id="screen14">
+                <div id="task_screen14"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 14 -->
+            <div class="screen" id="screen15">
+                <div id="task_screen15"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 16 -->
+            <div class="screen" id="screen16">
+                <div id="task_screen16"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 17 -->
+            <div class="screen" id="screen17">
+                <div id="task_screen17"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 18 -->
+            <div class="screen" id="screen18">
+                <div id="task_screen18"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 19 -->
+            <div class="screen" id="screen19">
+                <div id="task_screen19"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 20 -->
+            <div class="screen" id="screen20">
+                <div id="task_screen20"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 21 -->
+            <div class="screen" id="screen21">
+                <div id="task_screen21"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 22 -->
+            <div class="screen" id="screen22">
+                <div id="task_screen22"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 23 -->
+            <div class="screen" id="screen23">
+                <div id="task_screen23"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 24 -->
+            <div class="screen" id="screen24">
+                <div id="task_screen24"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 25 -->
+            <div class="screen" id="screen25">
+                <div id="task_screen25"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 26 -->
+            <div class="screen" id="screen26">
+                <div id="task_screen26"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 27 -->
+            <div class="screen" id="screen27">
+                <div id="task_screen27"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Survey Screen 28 -->
+            <div class="screen" id="screen28">
+                <div id="task_screen28"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div>
+            </div>
+
+            <!-- Feedback Screen -->
+            <div class="screen" id="screen29">
+                <div id="task_screen29"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" class="nextbutton">Next</crowd-button>
+                </div> 
+            </div>
+
+            <!-- Demographic Screen -->
+            <div class="screen" id="screen30">
+                <div id="task_screen30"></div>
+                <div style="display: table; margin: 0 auto; margin-top:30px; margin-bottom:10px;">
+                    <crowd-button variant="primary" form-action="submit" id="finish">Finish</crowd-button>
+                </div>
+            </div>
+
+            <div class="screen" id="screen31">
+                <div id="response_screen"></div>
+            </div>
+
+        </form>
+
+    </section>
+    
+</body>
+
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet" /><!-- Open internal style sheet -->
+<style type="text/css">
+    #collapseTrigger{
+    color:#fff;
+    display: block;
+    text-decoration: none;
+    }
+    #submitButton{
+    white-space: normal;
+    display: table; 
+    margin: 0 auto;
+    }
+    .image{
+    margin-bottom: 15px; 
+    }
+    /* CSS for breaking long words/urls */
+    .dont-break-out {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    }
+    .task{
+        margin: 10px;
+    }
+    .text_screen {
+        border-style: solid;
+        margin: 0px 50px 0px 20px;
+        border-width: 3.5px;
+        border-color: #F5F5F5;
+        padding: 10px;
+        border-radius: 1px;
+    }
+
+    .background_screen{
+        margin-top:0px;
+        margin: 0px 50px 0px 20px;
+        border-width: 0.5px;
+        padding: 10px;
+        background-color: #F5F5F5;
+        border-radius: 1px;
+    }
+
+    input[type="text"],
+        select.form-control {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #000000;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 0;
+        }
+
+        input[type="text"]:focus,
+        select.form-control:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        }
+
+
+</style>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4" crossorigin="anonymous"></script><!-- Open internal javascript -->
+<script src="static/js/intro.js"></script>
+
+<script  src="static/js/screen.js"></script>
+<script  src="static/js/startup.js"></script>
+<script  src="static/js/instructions.js"></script>
+<script  src="static/js/survey.js"></script>
+<script src="static/js/main.js"></script>
+<script src="static/js/highlight.js"></script>
+
+
+<script>
+
+$(document).ready(function() {
+    
+    examples = JSON.parse('{{params.examples|tojson}}')
+    globalThis.sample_indices = examples
+    globalThis.w_hl=JSON.parse('{{params.w_hl}}')
+
+    console.log(w_hl)
+
+    main()
+
+    var notes = "";
+    var Counter = 0;
+
+    // Instructions expand/collapse
+    var content = $('#instructionBody');
+    var trigger = $('#collapseTrigger');
+    
+    // content.hide();
+    $('.collapse-text').text('(Click to collapse)');
+    trigger.click(function(){
+      content.toggle();
+      var isVisible = content.is(':visible');
+      if(isVisible){
+        $('.collapse-text').text('(Click to collapse)');
+      }else{
+        $('.collapse-text').text('(Click to expand)');
+      }
+    });
+    // end expand/collapse
+
+    $('#startsurvey').click(function(){
+
+        globalThis.surveyStartTime = Date.now()
+
+        $('#tutorial').hide()
+        $('#startsurvey_scrn').hide()
+
+        // var screen = '#screen' + Counter
+        // consent_screen(Counter);
+        Counter = showNewScreen(Counter, notes, language)
+        // $(screen).show();
+    });
+
+    $('.nextbutton').click(function(){
+        notes = updateNotes(Counter, notes);
+        hideCurrScreen(Counter)
+        Counter = showNewScreen(Counter, notes, language)
+        
+    });
+
+    $('#finish').click(function(){
+        globalThis.endTime = Date.now()
+        var screen = '#screen' + Counter
+        $(screen).hide()
+        // console.log($('#notes1').value);
+        var results = $( "form" ).serializeArray();
+        results = collateResults(results)
+
+        Counter += 1;
+        var screen = '#screen'+Counter;
+
+        $.ajax({
+            type:'POST',
+            data:$.param(results),
+            url:'/',
+            success:function(data) {
+                create_response_screen(data)
+                $(screen).show();
+            }
+        });
+        
+    });
+    
+  });
+</script><!-- Close internal javascript -->
+
+</html>

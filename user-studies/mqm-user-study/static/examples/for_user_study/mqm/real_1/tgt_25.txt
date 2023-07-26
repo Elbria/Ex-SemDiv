@@ -1,0 +1,1 @@
+ Schriftgröße <h-l-2>anpassen</h-l-2> : Ziehen Sie das Kreissymbol <h-l-1>neben</h-l-1> " Schriftgröße " , um die Größe des Textes zu ändern .

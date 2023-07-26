@@ -1,0 +1,1 @@
+ Wählen Sie unter " Zahlungsinformationen " den Kreditkartentyp aus und geben Sie Ihre Kartennummer , den Sicherheitscode ( CVV ) , den Namen auf der Karte und das Ablaufdatum ein .

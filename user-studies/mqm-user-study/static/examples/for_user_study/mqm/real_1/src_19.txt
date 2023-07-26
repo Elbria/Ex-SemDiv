@@ -1,0 +1,1 @@
+ <h-l-2>I kindly ask for your patience and wait <h-l-1>for your order</h-l-1> to be delivered <h-l-3>within</h-l-3> # NUMBER # minutes .

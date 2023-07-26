@@ -1,0 +1,1 @@
+ Les vitesses de la norme Wi-Fi 802.11n sont sensiblement plus rapides que celles de ses prédécesseurs, avec un débit théorique maximum de 600 Mbit/s.

@@ -1,0 +1,1 @@
+ Fade-Thru-Black ( FTBTM ) Switching - Das Video verblasst auf schwarz und dann verblasst der neue <h-l-1>Eingang</h-l-1> von schwarz für einen glatten , glitch-freien Switching .

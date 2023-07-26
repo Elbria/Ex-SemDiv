@@ -1,0 +1,1 @@
+ Der Typ im Laden hat die Dinge überprüft und es stellt sich heraus , dass der aktuelle Preis der Reifen mehr war als mein <h-l-1>Ausdruck</h-l-1> .

@@ -1,0 +1,1 @@
+ Las velocidades del estándar 802.11n son mucho más altas que las alcanzadas por los que lo precedieron, con un <h-l-1>rendimiento teórico</h-l-1> máximo de 600 Mbps.

@@ -1,0 +1,1 @@
+ <h-l-1>The controller,</h-l-1> resembling a TV remote, employs two sensors located near the user's television to calculate its position in three-dimensional space through triangulation.
