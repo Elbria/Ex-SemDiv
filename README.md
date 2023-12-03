@@ -9,8 +9,8 @@ We introduce a technique to generate contrastive phrasal highlights via phrase-a
 ## Table of contents
 
 - [Setup](#setup)
-- [Explaining with Contrastive Highlights](#explaining-with-contrastive-phrasal-highlighting-a-case-study-in-assisting-humans-to-detect-translation-differences)
-- [Evaluating with User Studies](#user-studies)
+- [Explaining with Contrastive Highlights](#explaining-with-contrastive-highlights)
+- [Evaluating with User Studies](#evaluating-with-user-studies)
 
 ## Setup
 
@@ -43,6 +43,6 @@ The algorithm takes as input tab-separated files containing the source and targe
     ```    
 For each of the input files in ``annoations/`` you can find the corresponding outputs in ``outputs/``.
 
-## User Studies
+## Evaluating with User Studies
 
 The code and collected responses for the application-grounded evaluations are in ``user-studies/``.
