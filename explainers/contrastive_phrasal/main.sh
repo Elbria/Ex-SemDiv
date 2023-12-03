@@ -22,21 +22,6 @@ input_dir=/fs/clip-divergences/xling-SemDiv/Ex-SemDiv/annotations
 
 #exit
 
-
-# Natural Hallucinations
-#output=${output_dir}/natural_hallucinations_missing_paired_phrases_reward
-#input=/fs/clip-divergences/Ex-QE-data/hallucinations/natural_hallucinations_inter
-#model_name_or_path=/fs/clip-divergences/xling-SemDiv/trained_bert/from_WikiMatrix.de-en.tsv.filtered_sample_50000.moses.seed/contrastive_divergence_ranking/rdpg
-#python main.py --paired_phrases --missing_phrases --model_name_or_path ${model_name_or_path} --reward --input ${input} --output ${output}
-#exit
-
-# German GeneralMT MQM 2022
-#output=${output_dir}/mqm_generalMT2022_en_de_missing_paired_phrases_reward_pos
-#input=${input_dir}/mqm_generalMT2022_en_de_itermax_pos_pos
-#model_name_or_path=/fs/clip-divergences/xling-SemDiv/trained_bert/from_WikiMatrix.de-en.tsv.filtered_sample_50000.moses.seed/contrastive_divergence_ranking/rdpg
-#python main.py --paired_phrases --pos --missing_phrases --model_name_or_path ${model_name_or_path} --reward --input ${input} --output ${output}
-#exit
-
 # Portuguese CED
 output=${output_dir}/en_pt_ced_test_with_labels_missing_paired_phrases_reward_pos
 input=${input_dir}/ced_en_pt_with_labels_itermax_pos_pos
@@ -44,13 +29,7 @@ model_name_or_path=/fs/clip-divergences/xling-SemDiv/trained_bert/from_WikiMatri
 python main.py --paired_phrases --pos --missing_phrases --model_name_or_path ${model_name_or_path} --reward --input ${input} --output ${output}
 exit
 
-# German CED
-output=${output_dir}/en_de_ced_test_missing_paired_phrases_reward_pos
-input=${input_dir}/ced_en_de_itermax_pos_pos
-model_name_or_path=/fs/clip-divergences/xling-SemDiv/trained_bert/from_WikiMatrix.de-en.tsv.filtered_sample_50000.moses.seed/contrastive_divergence_ranking/rdpg
-python main.py --paired_phrases --pos --missing_phrases --model_name_or_path ${model_name_or_path} --reward --input ${input} --output ${output}
-exit
-exit
+
 # Greek FLORES
 output=${output_dir}/ell_Grek.devtest_missing_paired_phrases_reward
 input=/fs/clip-divergences/xling-SemDiv/Ex-SemDiv/flores200_dataset/devtest/ell_Grek.devtest.divergent_itermax
