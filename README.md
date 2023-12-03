@@ -30,6 +30,10 @@ We introduce a technique to generate contrastive phrasal highlights via phrase-a
 
 ## Explaining with contrastive highlights
 
+<p align="center">
+    <img  src="static/exsemdiv_teaser_2.png" width="300" height="100" />
+</p>
+
 Download and preprocess WikiMatrix data for source-target language pair.
 The scripts takes as arguments the ISO codes of the desired language pair.
 The language pair must be in alphabetical order, e.g. "de-en" and not "en-de". 
@@ -44,9 +48,7 @@ Generate synthetic divergences from seed equivalents:
 
     bash generate-divergences.sh en fr 
     
-<p align="center">
-    <img  src="static/sem_div_video_ele.gif" width="600" height="400" />
-</p>
+
 
 ## User Studies
 
