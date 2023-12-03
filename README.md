@@ -31,7 +31,7 @@ We introduce a technique to generate contrastive phrasal highlights via phrase-a
 ## Explaining with Contrastive Highlights
 
 <p align="center">
-    <img  src="static/exsemdiv_teaser_2.png" width="1000" height="400" />
+    <img  src="static/exsemdiv_teaser.png" width="1000" height="400" />
 </p>
 
 Explain the prediction of the divergent classifier R(S) by highlighting the phrasal pair (p) that, once erased, maximizes the model's prediction R(DEL[S;p]) multiplied by brevity reward (BR(S,p)).
