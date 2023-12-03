@@ -34,20 +34,13 @@ We introduce a technique to generate contrastive phrasal highlights via phrase-a
     <img  src="static/exsemdiv_teaser_2.png" width="1000" height="400" />
 </p>
 
-Download and preprocess WikiMatrix data for source-target language pair.
-The scripts takes as arguments the ISO codes of the desired language pair.
-The language pair must be in alphabetical order, e.g. "de-en" and not "en-de". 
-The list of available bitexts and their sizes are given in the file [list_of_bitexts.txt](https://github.com/facebookresearch/LASER/blob/master/tasks/WikiMatrix/list_of_bitexts.txt). 
-For example, to download the English-French parallel corpus run:
-
+Explain the prediction of the divergent classifier R(S) by highlighting the phrasal pair (p) that, once erased, maximized the model's prediction R(DEL[S;p]) multiplied by brevity reward (BR(S,p)).
+The algorithm takes as input tab-separated files containing the source and target texts along with their alignments (and optionally a sequence of pos-tags). For an example, of how you should format your input you can take a look at ``annotations/``. Once, you have your input ready, you can simply run: 
     
-    bash download-data.sh en fr 
-    
-
-Generate synthetic divergences from seed equivalents:
-
-    bash generate-divergences.sh en fr 
-    
+    ```bash
+    cd explainers/contrastive_phrasal
+    python main.py --paired_phrases --missing_phrases --reward --model_name_or_path ${model_name_or_path} --input ${input} --output ${output}
+    ```    
 
 
 ## User Studies
