@@ -9,8 +9,8 @@ We introduce a technique to generate contrastive phrasal highlights via phrase-a
 ## Table of contents
 
 - [Setup](#setup)
-- [Explaining with contrastive highlights](#explaining-with-contrastive-phrasal-highlighting-a-case-study-in-assisting-humans-to-detect-translation-differences)
-- [Evaluating the usefulness of contrastive highlights with user studies](#user-studies)
+- [Explaining with Contrastive Highlights](#explaining-with-contrastive-phrasal-highlighting-a-case-study-in-assisting-humans-to-detect-translation-differences)
+- [Evaluating with User Studies](#user-studies)
 
 ## Setup
 
@@ -28,39 +28,21 @@ We introduce a technique to generate contrastive phrasal highlights via phrase-a
     bash setup.sh
     ```
 
-## Explaining with contrastive highlights
+## Explaining with Contrastive Highlights
 
 <p align="center">
     <img  src="static/exsemdiv_teaser_2.png" width="1000" height="400" />
 </p>
 
-Explain the prediction of the divergent classifier R(S) by highlighting the phrasal pair (p) that, once erased, maximized the model's prediction R(DEL[S;p]) multiplied by brevity reward (BR(S,p)).
-The algorithm takes as input tab-separated files containing the source and target texts along with their alignments (and optionally a sequence of pos-tags). For an example, of how you should format your input you can take a look at ``annotations/``. Once, you have your input ready, you can simply run: 
+Explain the prediction of the divergent classifier R(S) by highlighting the phrasal pair (p) that, once erased, maximizes the model's prediction R(DEL[S;p]) multiplied by brevity reward (BR(S,p)).
+The algorithm takes as input tab-separated files containing the source and target texts along with their [SimAlign](https://github.com/cisnlp/simalign) alignments (and optionally a sequence of pos-tags). For an example, of how you should format your input you can take a look at ``annotations/``. Once, you have your input ready, you can simply run: 
     
     ```bash
     cd explainers/contrastive_phrasal
     python main.py --paired_phrases --missing_phrases --reward --model_name_or_path ${model_name_or_path} --input ${input} --output ${output}
     ```    
-
+For each of the input files in ``annoations/`` you can find the corresponding outputs in ``outputs/``.
 
 ## User Studies
 
-
-
-## Citation
-
-If you use any contents of this repository, please cite us.
-
-```
-@inproceedings{briakou-carpuat-2020-detecting,
-    title = "Detecting Fine-Grained Cross-Lingual Semantic Divergences without Supervision by Learning to Rank",
-    author = "Briakou, Eleftheria and Carpuat, Marine",
-    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
-    month = nov,
-    year = "2020",
-    address = "Online",
-    publisher = "Association for Computational Linguistics",
-    url = "https://www.aclweb.org/anthology/2020.emnlp-main.121",
-    pages = "1563--1580",
-}
-```
+The code and collected responses for the application-grounded evaluations are in ``user-studies/``.
