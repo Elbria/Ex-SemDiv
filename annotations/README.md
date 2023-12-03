@@ -1,6 +1,6 @@
-# Alignment Augmented Bitexts
+# Alignment-augmented Bitexts
 
-This directory contains bitexts, augmented with word-alignment annotations and (optionally) part-of-speech tags.
+This directory contains bitexts, augmented with word-alignment annotations and (optionally) part-of-speech tags, used as inputs by the contrastive explainer.
 
 The datasets covered include: 
 
