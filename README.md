@@ -31,7 +31,7 @@ We introduce a technique to generate contrastive phrasal highlights via phrase-a
 ## Explaining with contrastive highlights
 
 <p align="center">
-    <img  src="static/exsemdiv_teaser_2.png" width="1000" height="200" />
+    <img  src="static/exsemdiv_teaser_2.png" width="1000" height="250" />
 </p>
 
 Download and preprocess WikiMatrix data for source-target language pair.
