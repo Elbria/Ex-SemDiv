@@ -3,7 +3,7 @@
 This repository contains code and data from the EMNLP 2023 paper that can be found [here]()!
 
 This work shows that NLP predictions of models comparing two textual inputs, can be better explained by contrastive color-coded highlights that answer the question: *"What differences between the two inputs explain this prediction?"*. 
-We introduce a technique to generate contrastive phrasal highlights via phrase-alignment-guided erasure and show, for the first time, that such highlights *help* bilingual humans when detecting meaning differences in human and machine translation texts.
+We introduce a technique to generate contrastive phrasal highlights via phrase-alignment-guided erasure and show, for the first time, that such highlights *help* bilingual humans when detecting meaning differences in human and machine translated texts.
 
 
 ## Table of contents
